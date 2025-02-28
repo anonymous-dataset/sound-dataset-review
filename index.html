@@ -270,7 +270,7 @@
             This evaluation setup helps assess how well voice conversion models adapt to different sound effects and
             real-world sound-designed data.</div>
         <script>
-            const categories = ['seen_to_seen', 'seen_to_unseen', 'unseen_to_seen', 'unseen_to_unseen', 'zeroshot'];
+            const categories = ['seen_to_seen', 'seen_to_unseen', 'unseen_to_seen', 'unseen_to_unseen', 'real-word references'];
             const models = ['source', 'reference', 'freevc', 'enhanced'];
             const presetMap = {
                 'seen_to_seen_1': 'Ring Modulator, Spectral Shifting',
@@ -288,7 +288,7 @@
             };
 
             categories.forEach(cat => {
-                const isZeroshot = (cat === 'zeroshot');
+                const isZeroshot = (cat === 'real-word references');
                 document.write(`<h3><strong>${cat.replace(/_/g, '-')}</strong></h3>`);
                 document.write('<div class="description-row"><div>Source</div><div>Reference</div><div>FreeVC</div><div>Enhanced</div></div>');
                 for (let i = 1; i <= 3; i++) {

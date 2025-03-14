@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designed Vocalizations Dataset</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 2px solid #eee;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 14px 28px;
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-weight: 600;
+            margin-top: 0px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-weight: 500;
+            margin-top: 30px;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 5px;
+        }
+
+        .description-row,
+        .sample-group {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            align-items: center;
+            margin: 20px 0;
+            text-align: center;
+            gap: 15px;
+        }
+
+        .description {
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .audio-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        audio {
+            margin: 5px;
+            width: 175px;
+        }
+
+        img {
+            width: 175px;
+            margin-top: 5px;
+        }
+
+        hr {
+            border: 1px solid #eee;
+            margin: 30px 0;
+        }
+
+        .note {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-left: 4px solid #000;
+            font-size: 0.95em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #777;
+            border-top: 2px solid #eee;
+        }
+
+        .preset-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .preset-box {
+            background: #f4f4f4;
+            padding: 10px 10px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 0.95em;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            min-width: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Designed Vocalizations Dataset</h1>
+        <p>Sound-Effect-Modified Human and Animal Voices for Non-Natural Voice Conversion</p>
+        <div>Anonymous submissions to Interspeech 2025</div>
+        <div style="max-width: 800px; margin: 20px auto 0 auto; text-align: center;">Advancements in AI-based voice
+            conversion have revolutionized media applications, including films, audiobooks, and games. While research
+            has primarily focused on natural human speech, artificially designed voices, such as monster growls and
+            robotic sounds, remain underexplored despite their distinct acoustic properties and the complexities
+            introduced by sound designers' intricate crafting. Hence, we introduce a novel dataset generated using the
+            vocal effects processor “Dehumaniser,” comprising original audio and its variations with applied effects on
+            speech and animal sounds. We constructed test sets using both synthesized and real-world sound-designed
+            audio to evaluate model generalization. Experimental results highlight the potential of voice conversion
+            models for timbre conversion in designed sounds, emphasizing the influence of sound effects on conversion
+            quality and the need for further analysis.</div>
+        <!-- <a href="https://github.com/anonymous-dataset/sound-dataset-review" class="button" target="_blank">Download
+            Dataset</a> -->
+    </header>
+
+    <section>
+        <h2>Dataset Samples</h2>
+        <p style="font-size: 1.1em; color: #444; margin-bottom: 15px;">Examples of audio created using effect presets
+            and real-world sound-designed samples collected online, which constitute the dataset.</p>
+        <h3><strong>Basic Presets</strong></h3>
+        <div>These audio samples were created using Dehumaniser's built-in effect presets, incorporating effects such as
+            Ring Modulator, Pitch Shift, Noise Generator, Granular, Flanger/Chorus, Delay Pitch Shift, and Spectral
+            Shifting.</div>
+
+        <div class="preset-container"
+            style="display: grid; grid-template-columns: repeat(6, 1fr); text-align: center; gap: 15px; margin-bottom: 10px;">
+            <div class="preset-box"><strong>Original</strong></div>
+            <div class="preset-box"><strong>Preset A</strong>
+                <span style="display: block; white-space: pre-line;">Pitch Shift<br>Delay Pitch Shift</span>
+            </div>
+            <div class="preset-box"><strong>Preset B</strong>
+                <span style="display: block; white-space: pre-line;">Ring Modulator<br>Flanger/Chorus
+                    Spectral Shifting</span>
+            </div>
+            <div class="preset-box"><strong>Preset C</strong>
+                <span style="display: block; white-space: pre-line;">Ring Modulator<br>Flanger/Chorus
+                    Spectral Shifting</span>
+            </div>
+            <div class="preset-box"><strong>Preset D</strong>
+                <span style="display: block; white-space: pre-line;">Ring Modulator<br>Noise Generator</span>
+            </div>
+            <div class="preset-box"><strong>Preset E</strong>
+                <span style="display: block; white-space: pre-line;">Noise Generator<br>Flanger/Chorus</span>
+            </div>
+        </div>
+
+        <script>
+            const basicFiles = ['original1', 'original2', 'original3'];
+            const basicPresets = ['basic1', 'basic2', 'basic3', 'basic4', 'basic5'];
+            basicFiles.forEach(file => {
+                document.write('<div class="sample-group">');
+                document.write(`<audio controls src="audios/basic_presets/${file}.wav"></audio>`);
+                basicPresets.forEach(preset => {
+                    document.write(`<audio controls src="audios/basic_presets/${file}_${preset}.wav"></audio>`);
+                });
+                document.write('</div>');
+            });
+        </script>
+
+        <h3><strong>Custom Presets</strong></h3>
+        <div>These audio samples were created using custom-designed presets, combining Dehumaniser effects with
+            additional processing in Cubase. This includes an extended range of effects such as compressor, reverb,
+            limiter, stereo enhancer, distortion, and equalization adjustments.</div>
+        <div class="preset-container"
+            style="display: grid; grid-template-columns: repeat(6, 1fr); text-align: center; gap: 15px; margin-bottom: 10px;">
+            <div class="preset-box"><strong>Original</strong></div>
+            <div class="preset-box"><strong>Preset A</strong>
+                <span style="display: block; white-space: pre-line;">Pitch Shift<bt>Granular<br>EQ<br>Reverb</bt></span>
+            </div>
+            <div class="preset-box"><strong>Preset B</strong>
+                <span style="display: block; white-space: pre-line;">Pitch Shift<br>Granular<br>Flanger/Chorus
+                    Delay Pitch Shift<br>Compressor<br>EQ<br>Reverb</span>
+            </div>
+            <div class="preset-box"><strong>Preset C</strong>
+                <span style="display: block; white-space: pre-line;">Pitch Shift<br>Noise Generator<br>Compressor
+                    EQ<br>Reverb<br>Limiter<br>Distortion</span>
+            </div>
+            <div class="preset-box"><strong>Preset D</strong>
+                <span style="display: block; white-space: pre-line;">Pitch Shift<br>Noise Generator<br>Flanger/Chorus
+                    Reverb</span>
+            </div>
+            <div class="preset-box"><strong>Preset D</strong>
+                <span style="display: block; white-space: pre-line;">Pitch Shift<br>Noise Generator<br>EQ</span>
+            </div>
+        </div>
+
+        <script>
+            const customFiles = ['originalA', 'originalB', 'originalC'];
+            const customPresets = ['custom1', 'custom2', 'custom3', 'custom4', 'custom5'];
+            customFiles.forEach(file => {
+                document.write('<div class="sample-group">');
+                document.write(`<audio controls src="audios/custom_presets/${file}.wav"></audio>`);
+                customPresets.forEach(preset => {
+                    document.write(`<audio controls src="audios/custom_presets/${file}_${preset}.wav"></audio>`);
+                });
+                document.write('</div>');
+            });
+        </script>
+
+        <h3><strong>Real World Samples</strong></h3>
+        <div class="description-row">
+            <div>Description</div>
+            <div>Sample</div>
+        </div>
+        <script>
+            const realWorldSamples = [
+                { file: 'sample1', description: 'A robot talking sound to be used in sci-fi games' },
+                { file: 'sample2', description: 'A big monstrous creature screaming' },
+                { file: 'sample3', description: 'A soft ghostly voice' }
+            ];
+            realWorldSamples.forEach(sample => {
+                document.write('<div class="sample-group">');
+                document.write(`<div class="description">${sample.description}</div>`);
+                document.write(`<audio controls src="audios/real_world/${sample.file}.wav"></audio>`);
+                document.write('</div>');
+            });
+        </script>
+
+        <h2 style="margin-top: 60px;">Timbre Conversion Samples</h2>
+        <div>These timbre conversion samples showcase the results of FreeVC and an enhanced model across various test
+            scenarios, including Seen-to-Seen, Seen-to-Unseen, Unseen-to-Seen, Unseen-to-Unseen, and Zeroshot cases.
+            This evaluation setup helps assess how well voice conversion models adapt to different sound effects and
+            real-world sound-designed data.</div>
+        <script>
+            const categories = ['seen_to_seen', 'seen_to_unseen', 'unseen_to_seen', 'unseen_to_unseen', 'real-word references'];
+            const models = ['source', 'reference', 'freevc', 'enhanced'];
+            const presetMap = {
+                'seen_to_seen_1': 'Ring Modulator, Spectral Shifting',
+                'seen_to_seen_2': 'Pitch Shift, Noise Generator, Granular, Delay Pitch Shift',
+                'seen_to_seen_3': 'Ring Modulator',
+                'seen_to_unseen_1': 'Pitch Shift, Noise Generator, Compressor, EQ, Reverb, Limiter, Stereo Enhancer, DeEsser',
+                'seen_to_unseen_2': 'Pitch Shift, Granular, Delay Pitch Shift, EQ, Reverb',
+                'seen_to_unseen_3': 'Flanger/Chorus, Spectral Shifting',
+                'unseen_to_seen_1': 'Ring Modulator, Noise Generator',
+                'unseen_to_seen_2': 'Flanger/Chorus, Delay Pitch Shift',
+                'unseen_to_seen_3': 'Noise Generator, Granular',
+                'unseen_to_unseen_1': 'Ring Modulator, Delay Pitch Shift',
+                'unseen_to_unseen_2': 'Pitch Shift, Granular, Spectral Shifting',
+                'unseen_to_unseen_3': 'Ring Modulator, Pitch shift, Flanger/Chorus, Delay Pitch Shift'
+            };
+
+            categories.forEach(cat => {
+                const isZeroshot = (cat === 'real-word references');
+                document.write(`<h3><strong>${cat.replace(/_/g, '-')}</strong></h3>`);
+                document.write('<div class="description-row"><div>Source</div><div>Reference</div><div>FreeVC</div><div>Enhanced</div></div>');
+                for (let i = 1; i <= 3; i++) {
+                    document.write('<div class="sample-group">');
+                    models.forEach(model => {
+                        document.write('<div class="audio-container">');
+                        document.write(`<audio controls src="audios/timbre_conversion/${cat}_${i}_${model}.wav"></audio>`);
+                        document.write(`<img src="images/timbre_conversion/${cat}_${i}_${model}.png">`);
+                        document.write('</div>');
+                    });
+                    const presetKey = `${cat}_${i}`;
+                    const presetDescription = presetMap[presetKey] || 'Unknown Preset';
+                    if (!isZeroshot) {
+                        if (!isZeroshot) {
+                            document.write('<div class="preset-container" style="display: flex; justify-content: space-between; align-items: center; gap: 15px; text-align: center; width: 100%; margin: 10px 0;">');
+                            document.write(`<div class="preset-box"><strong>Preset</strong><span style="display: block; white-space: pre-line;">${presetDescription.replace(/, /g, '<br>')}</span></div>`);
+                            document.write('</div>');
+                        }
+                    }
+                    document.write('</div>');
+                }
+            });
+        </script>
+
+        <div style="margin-top: 60px;" class="note">
+            <h2>Note</h2>
+            <p><strong>During the review phase, only a subset of the dataset will be made available. Full dataset access
+                    will be provided upon publication.</strong></p>
+        </div>
+
+    </section>
+
+
+    <footer>
+        <p>&copy; Designed Vocalizations Dataset | Licensed under CC BY-NC-SA 4.0</p>
+    </footer>
+</body>
+
+</html>
